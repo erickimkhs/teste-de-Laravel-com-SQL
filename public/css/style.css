@@ -1,0 +1,195 @@
+/* Simple Pet Adoption Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.auth-corner {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.auth-btn {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f0f8ff;
+}
+
+.adopt-btn {
+    background: orange;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.animal-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.animal-card {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.welcome-msg {
+    background: green;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+/* Fix image overflow */
+.animal-card {
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    overflow: hidden; /* ← THIS FIXES OVERFLOW */
+    background: white;
+    width: 300px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.animal-image {
+    width: 100%; /* Full width of card */
+    height: 200px;
+    object-fit: cover; /* Crops to fit */
+    display: block; /* Removes bottom space */
+}
+
+.animal-info {
+    padding: 15px;
+}
+
+.animal-info h3 {
+    color: #2E8B57;
+    margin: 0 0 10px 0;
+}
+
+.animal-info p {
+    color: #666;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+.pagination-btn {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.pagination-btn:hover {
+    background: #45a049;
+}
+
+.page-info {
+    font-weight: bold;
+    color: #2E8B57;
+    font-size: 18px;
+}
+
+.animal-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive: 3 cards on desktop, 2 on tablet, 1 on mobile */
+@media (max-width: 1024px) {
+    .animal-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .animal-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+.dropdown-item {
+    padding: 8px 20px;
+    color: #333;
+    transition: all 0.2s;
+}
+
+.dropdown-item:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.dropdown-divider {
+    margin: 5px 0;
+}

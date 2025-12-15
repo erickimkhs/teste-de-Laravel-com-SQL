@@ -1,0 +1,302 @@
+/* resources/css/custom.css */
+/* Pet Adoption Center Theme */
+:root {
+    --primary-green: #2E8B57;
+    --secondary-green: #3CB371;
+    --light-green: #90EE90;
+    --accent-orange: #FF8C42;
+    --light-bg: #F8F9FA;
+    --dark-text: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+
+/* Auth Button in Corner */
+.auth-corner {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1050;
+    animation: slideIn 0.5s ease-out;
+}
+
+.auth-btn {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+    font-size: 1rem;
+}
+
+.auth-btn:hover {
+    background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(46, 139, 87, 0.4);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 150px 0 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+/* Adopt Now Button */
+.adopt-now-btn {
+    background: var(--accent-orange);
+    color: white;
+    border: none;
+    padding: 18px 45px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 140, 66, 0.4);
+    animation: pulse 2s infinite;
+    margin-top: 2rem;
+}
+
+.adopt-now-btn:hover {
+    background: #FF6B21;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 140, 66, 0.6);
+}
+
+/* Animal Gallery */
+.gallery-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-green);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--accent-orange);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.animal-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.animal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border-color: var(--light-green);
+}
+
+.animal-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.animal-card:hover .animal-image {
+    transform: scale(1.05);
+}
+
+.animal-info {
+    padding: 20px;
+}
+
+.animal-name {
+    color: var(--primary-green);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.animal-details {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.feature-box {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-green);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 140, 66, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 140, 66, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 140, 66, 0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .animal-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .auth-corner {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+/* Auth Forms */
+.auth-form-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 100px auto;
+}
+
+.auth-form-title {
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-input {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.form-input:focus {
+    border-color: var(--primary-green);
+    outline: none;
+}
